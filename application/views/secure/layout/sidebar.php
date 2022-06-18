@@ -223,7 +223,7 @@ foreach ($auth->result() as $key => $akses) {
 <!-- Koordinator -->
 <?php if ($level['UserLevelAktif'] == 'koordinator') { ?>
 <!-- Periode -->
-<!-- <li
+<li
     class="nav-item dropdown <?php echo $this->uri->segment(2) == 'master' || $this->uri->segment(2) == 'add' ? 'active' : '' ?>">
     <a href="" class="nav-link has-dropdown" data-toggle="dropdown">
         <i class="fas fa-database"></i>
@@ -259,10 +259,10 @@ foreach ($auth->result() as $key => $akses) {
             </a>
         </li>
     </ul>
-</li> -->
+</li>
 
 <!-- Cek Berkas -->
-<!-- <li
+<li
     class="nav-item dropdown <?php echo $this->uri->segment(2) == 'pendaftaran' || $this->uri->segment(2) == '' ? 'active' : '' ?>">
     <a href="" class="nav-link has-dropdown" data-toggle="dropdown">
         <i class="fas fa-tasks"></i>
@@ -294,17 +294,15 @@ foreach ($auth->result() as $key => $akses) {
             </a>
         </li>
     </ul>
-</li> -->
-
+</li>
 <!-- Bagi Pembimbing -->
-<!-- <li>
+<li>
     <a class="nav-link" href="<?php echo base_url('secure/bimbingan/bagi_dosbing') ?>"><i class="fas fa-user-tie"></i>
         <span>Bagi Pembimbing</span>
     </a>
-</li> -->
-
+</li>
 <!-- Penjadwalan -->
-<!-- <li
+<li
     class="nav-item dropdown <?php echo $this->uri->segment(2) == 'jadwal' || $this->uri->segment(2) == 'add' ? 'active' : '' ?>">
     <a href="" class="nav-link has-dropdown" data-toggle="dropdown">
         <i class="fas fa-calendar-alt"></i>
@@ -322,10 +320,9 @@ foreach ($auth->result() as $key => $akses) {
             </a>
         </li>
     </ul>
-</li> -->
-
+</li>
 <!-- Skripsi -->
-<!-- <li
+<li
     class="nav-item dropdown <?php echo $this->uri->segment(2) == 'skripsi' || $this->uri->segment(2) == 'add' ? 'active' : '' ?>">
     <a href="" class="nav-link has-dropdown" data-toggle="dropdown">
         <i class="fas fa-graduation-cap"></i>
@@ -361,15 +358,13 @@ foreach ($auth->result() as $key => $akses) {
             </a>
         </li>
     </ul>
-</li> -->
-
+</li>
 <!-- Monitoring -->
 <li <?php echo $this->uri->segment(2) == 'monitoring' ? 'class="active"' : '' ?>>
     <a class="nav-link" href="<?php echo base_url('secure/monitoring') ?>"><i class="fas fa-tv"></i>
         <span>Monitoring</span>
     </a>
 </li>
-
 <!-- Laporan -->
 <li <?php echo $this->uri->segment(3) == 'laporan' ? 'class="active"' : '' ?>>
     <a class="nav-link" href="<?php echo base_url('secure/laporan') ?>"><i class="fas fa-chart-bar"></i>
@@ -544,5 +539,4 @@ foreach ($auth->result() as $key => $akses) {
             <?php if (validation_errors()) {
  echo validation_errors();}?>
 
-</div>
-</div>
+            </div>
