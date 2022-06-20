@@ -1,6 +1,6 @@
 <!-- ambil level yang aktif -->
-<?php 
-$sql1 ="SELECT UserLevelAktif FROM tuser where UserId =  ".$this->session->userdata('UserId'); 
+<?php
+$sql1 = "SELECT UserLevelAktif FROM tuser where UserId =  " . $this->session->userdata('UserId');
 $level = $this->db->query($sql1)->row_array();
 ?>
 
@@ -28,10 +28,10 @@ $level = $this->db->query($sql1)->row_array();
         ***********************************-->
         <div class="nav-header">
             <input type="hidden" id="base" value="<?php echo base_url(); ?>">
-            <a href="<?=base_url('mhs/dasbor')?>" class="brand-logo">
-                <img class="logo-abbr" src="<?=base_url()?>vendor/collections/icon.png" alt="">
-                <img class="logo-compact" src="<?=base_url()?>vendor/collections/icon-txt.png" alt="">
-                <img class="brand-title" src="<?=base_url()?>vendor/collections/icon-txt.png" alt="">
+            <a href="<?= base_url('mhs/dasbor') ?>" class="brand-logo">
+                <img class="logo-abbr" src="<?= base_url() ?>vendor/collections/icon.png" alt="">
+                <img class="logo-compact" src="<?= base_url() ?>vendor/collections/icon-txt.png" alt="">
+                <img class="brand-title" src="<?= base_url() ?>vendor/collections/icon-txt.png" alt="">
             </a>
 
             <div class="nav-control">
@@ -59,12 +59,9 @@ $level = $this->db->query($sql1)->row_array();
                         <ul class="navbar-nav header-right">
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
-                                    <img class="rounded mr-3"
-                                        src="<?=base_url()?>vendor/adminpanel/images/profile/17.jpg" width="20"
-                                        alt="" />
+                                    <img class="rounded mr-3" src="<?= base_url() ?>vendor/adminpanel/images/profile/17.jpg" width="20" alt="" />
                                     <div class="header-info">
-                                        <span
-                                            class="text-black"><strong><?php echo $this->session->userdata('UserUsername'); ?></strong></span>
+                                        <span class="text-black"><strong><?php echo $this->session->userdata('UserUsername'); ?></strong></span>
                                         <p class="fs-12 mb-0"><?php echo $level['UserLevelAktif'] ?></p>
                                     </div>
                                 </a>
@@ -73,18 +70,14 @@ $level = $this->db->query($sql1)->row_array();
 
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a href="<?php echo base_url('secure/profil') ?>" class="dropdown-item ai-icon">
-                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary"
-                                            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                             <circle cx="12" cy="7" r="4"></circle>
                                         </svg>
                                         <span class="ml-2">Profile </span>
                                     </a>
                                     <a href="#" onclick="exit_toast()" class="dropdown-item ai-icon">
-                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
-                                            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                                             <polyline points="16 17 21 12 16 7"></polyline>
                                             <line x1="21" y1="12" x2="9" y2="12"></line>
@@ -111,10 +104,8 @@ $level = $this->db->query($sql1)->row_array();
                         <form class="form-inline mr-auto">
                             <ul class="navbar-nav mr-3">
                                 <input type="hidden" id="base" value="<?php echo base_url(); ?>">
-                                <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i
-                                            class="fas fa-bars"></i></a></li>
-                                <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
-                                            class="fas fa-search"></i></a></li>
+                                <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                                <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
                             </ul>
                             <b>
                                 <p align="left" style="color: white; position: relative; top: 9px;">
@@ -122,19 +113,15 @@ $level = $this->db->query($sql1)->row_array();
                             </b>
                         </form>
                         <ul class="navbar-nav navbar-right">
-                            <li class="dropdown"><a href="#" data-toggle="dropdown"
-                                    class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                                     <div class="d-sm-none d-lg-inline-block">Hi,
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="<?php echo base_url('secure/profil') ?>" class="dropdown-item has-icon"
-                                        style="color: black;">
+                                    <a href="<?php echo base_url('secure/profil') ?>" class="dropdown-item has-icon" style="color: black;">
                                         <i class="far fa-user"></i>Profil
                                     </a>
-                                    <button class="btn" onclick="exit_toast()"
-                                        style="color: red; position: relative; left: 10px;"><i
-                                            class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;&nbsp;Logout</button>
+                                    <button class="btn" onclick="exit_toast()" style="color: red; position: relative; left: 10px;"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;&nbsp;Logout</button>
                                 </div>
                             </li>
                         </ul>
