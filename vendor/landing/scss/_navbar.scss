@@ -34,6 +34,7 @@ $navbar-nav-hover-line-height: 2px;
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
+    position: fixed !important;
 
     @include media-breakpoint-up(xl) {
         padding-top: $navbar-padding-y-xl;

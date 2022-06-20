@@ -44,16 +44,16 @@
                 <div class="d-grid d-xl-flex align-items-xl-center pb-15 pb-xl-0 w-100 gap-20 gap-xl-0">
                     <ul class="navbar-nav mx-xl-auto order-2 order-xl-1">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+                            <a class="nav-link active" aria-current="page" href="#beranda">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/#pricing-section">Informasi Pendaftaran</a>
+                            <a class="nav-link" aria-current="page" href="#pendaftaran">Informasi Pendaftaran</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/eventlist.html">Berita</a>
+                            <a class="nav-link" aria-current="page" href="#berita">Berita</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/joblist.html">Persyaratan</a>
+                            <a class="nav-link" aria-current="page" href="#persyaratan">Persyaratan</a>
                         </li>
                     </ul>
                     <!-- /.navbar-nav -->
@@ -79,6 +79,7 @@
     <!-- = /. Navbar Section = -->
 
     <main class="main">
+        <section id="beranda">
         <div class="bg-ghost-white">
             <div class="container-xxl">
                 <div class="row">
@@ -103,15 +104,15 @@
                             <!-- /.header-slider-content -->
 
                             <div class="d-flex flex-wrap align-items-center mt-60 gap-20">
-                                <a class="btn btn-primary fw-semiBold py-12 px-34 rounded-pill" href="/joblist.html"
-                                    role="button">Discover Now</a>
+                                <a class="btn btn-primary fw-semiBold py-12 px-34 rounded-pill" href="<?=base_url()?>register"
+                                    role="button">Daftar Sekarang</a>
                                 <a class="d-flex align-items-center fw-medium text-dark text-decoration-none"
                                     data-fslightbox="gallery" href="https://www.youtube.com/embed/pj5LRL3nwBg">
                                     <div href="#" class="btn btn-rounded btn-white border border-alice-blue">
-                                        <img src="<?=base_url()?>vendor/landing/assets/icons/play-stroke.svg"
-                                            class="svg-inject svg-icon text-primary is-20" alt="" />
+                                        <!-- <img src="<?=base_url()?>vendor/landing/assets/icons/play-stroke.svg"
+                                            class="svg-inject svg-icon text-primary is-20" alt="" /> -->
                                     </div>
-                                    <span class="ms-20">Watch video</span>
+                                    <!-- <span class="ms-20">Watch video</span> -->
                                 </a>
                             </div>
                             <!-- /.btn-discover-now and watch-video -->
@@ -135,6 +136,8 @@
             </div>
             <!-- /.container -->
         </div>
+        </section>
+        
         <!-- = /. Header Section = -->
 
         <!-- <div class="container py-60 py-lg-100">
@@ -162,12 +165,9 @@
                 </div>
             </div>
         </div> -->
-        <!-- = /. Logo Client Section = -->
 
-        <div class="mt-43"></div>
-        <!-- = /. Gap Section = -->
-
-        <div class="container-xxl py-60 overflow-hidden overflow-xxl-visible">
+        <section id="pendaftaran">
+        <div id="informasi" class="container-xxl py-60 overflow-hidden overflow-xxl-visible">
             <div class="row">
                 <div class="col-12 col-lg-6 col-xxl-5 order-2 order-lg-1">
                     <div class="d-grid gap-12 w-md-75 w-lg-100">
@@ -268,13 +268,10 @@
             </div>
             <!-- /.row -->
         </div>
-        <!-- /.container -->
-        <!-- = /. How It Work Section = -->
-
-        <div class="mt-xl-43"></div>
-        <!-- = /. Gap Section = -->
-
-        <div class="container-xxl py-60">
+        </section>
+        
+        <section id="berita">
+        <div id="#" class="container-xxl py-60">
             <div class="d-grid w-md-50 w-xl-34 mb-60 mx-auto gap-12">
                 <h2 class="heading-section-3 text-dark text-center mb-0">Why Choose Us</h2>
                 <div class="heading-text-2 lh-base text-dark text-center">Lorem ipsum dolor sit amet, consectetur
@@ -327,6 +324,8 @@
             </div>
             <!-- /.row -->
         </div>
+        </section>
+      
         <!-- /.container -->
         <!-- = /. Why Us Section = -->
 
@@ -521,12 +520,8 @@
                 <!-- /.profile-slider-btn-previous -->
             </div>
         </div>
-        <!-- /.container -->
-        <!-- = /. Featured Profile Slider Section = -->
 
-        <div class="mt-xl-43"></div>
-        <!-- = /. Gap Section = -->
-
+        <section id="persyaratan">
         <div class="container-xxl py-60">
             <div class="d-grid gap-12 w-md-50 w-xl-34 mb-60 mx-auto">
                 <h2 class="heading-section-3 text-dark text-center mb-0">Featured Jobs</h2>
@@ -796,8 +791,7 @@
             </div>
             <!-- /.btn-more -->
         </div>
-        <!-- /.container -->
-        <!-- = /. Featured Jobs Section = -->
+        </section>
 
         <div class="mt-xl-43"></div>
         <!-- = /. Gap Section = -->
