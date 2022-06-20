@@ -156,27 +156,30 @@ $level = $this->db->query($sql1)->row_array();
                 <!-- Dosen -->
             <?php } elseif ($level['UserLevelAktif'] == 'dosen') { ?>
                 <li <?php echo $this->uri->segment(3) == 'bimbingan' ? 'class="active"' : '' ?>>
-                    <a class="nav-link ai-icon" href="<?php echo base_url('secure/jadwal/bimbingan') ?>"><i class="flaticon-381-networking"></i>
-                        <span>Jadwal Bimbingan</span>
+                    <a href="<?php echo base_url('secure/jadwal/bimbingan') ?>" class="ai-icon" aria-expanded="false">
+                        <i class="flaticon-381-networking"></i>
+                        <span class="nav-text">Jadwal Bimbingan</span>
                     </a>
                 </li>
 
                 <li <?php echo $this->uri->segment(3) == 'mahasiswa' ? 'class="active"' : '' ?>>
-                    <a class="nav-link ai-icon" href="<?php echo base_url('secure/bimbingan/mahasiswa') ?>"><i class="flaticon-381-networking"></i>
-                        <span>Mahasiswa Bimbingan</span>
+                    <a href="<?php echo base_url('secure/bimbingan/mahasiswa') ?>" class="ai-icon" aria-expanded="false">
+                        <i class="flaticon-381-networking"></i>
+                        <span class="nav-text">Mahasiswa Bimbingan</span>
                     </a>
                 </li>
 
                 <li <?php echo $this->uri->segment(3) == 'proses_bimbingan' ? 'class="active"' : '' ?>>
-                    <a class="nav-link ai-icon" href="<?php echo base_url('secure/bimbingan/proses_bimbingan') ?>"><i class="flaticon-381-networking"></i>
-                        <span>Bimbingan</span>
+                    <a href="<?php echo base_url('secure/bimbingan/proses_bimbingan') ?>" class="ai-icon" aria-expanded="false">
+                        <i class="flaticon-381-networking"></i>
+                        <span class="nav-text">Bimbingan</span>
                     </a>
                 </li>
 
                 <li class="nav-item dropdown <?php echo $this->uri->segment(2) == 'nilai' || $this->uri->segment(2) == 'add' ? 'active' : '' ?>">
-                    <a href="" class="nav-link has-dropdown ai-icon" data-toggle="dropdown">
+                    <a href="" class="nav-link has-dropdown ai-icon" aria-expanded="false" data-toggle="dropdown">
                         <i class="flaticon-381-networking"></i>
-                        <span>Penilaian</span>
+                        <span class="nav-text">Penilaian</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li <?php echo $this->uri->segment(3) == 'seminar' ? 'class="active"' : '' ?>>
@@ -199,21 +202,23 @@ $level = $this->db->query($sql1)->row_array();
                 <!-- Kaprodi -->
             <?php } elseif ($level['UserLevelAktif'] == 'kaprodi') { ?>
                 <li <?php echo $this->uri->segment(2) == 'monitoring' ? 'class="active"' : '' ?>>
-                    <a class="nav-link ai-icon" href="<?php echo base_url('secure/monitoring') ?>"><i class="flaticon-381-networking"></i>
-                        <span>Monitoring</span>
+                    <a href="<?php echo base_url('secure/monitoring') ?>" class="nav-link ai-icon" aria-expanded="false">
+                        <i class="flaticon-381-networking"></i>
+                        <span class="nav-text">Monitoring</span>
                     </a>
                 </li>
 
                 <li <?php echo $this->uri->segment(2) == 'laporan' ? 'class="active"' : '' ?>>
-                    <a class="nav-link ai-icon" href="<?php echo base_url('secure/laporan') ?>"><i class="flaticon-381-networking"></i>
-                        <span>Laporan</span>
+                    <a href="<?php echo base_url('secure/laporan') ?>" class="nav-link ai-icon" aria-expanded="false">
+                        <i class="flaticon-381-networking"></i>
+                        <span class="nav-text">Laporan</span>
                     </a>
                 </li>
             <?php } elseif ($level['UserLevelAktif'] == 'operator') { ?>
                 <li class="nav-item dropdown <?php echo $this->uri->segment(2) == 'pendaftaran' || $this->uri->segment(2) == '' ? 'active' : '' ?>">
-                    <a href="" class="nav-link has-dropdown ai-icon" data-toggle="dropdown">
+                    <a href="" class="nav-link has-dropdown ai-icon" aria-expanded="false" data-toggle="dropdown">
                         <i class="flaticon-381-networking"></i>
-                        <span>Cek Berkas</span>
+                        <span class="nav-text">Cek Berkas</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li <?php echo $this->uri->segment(3) == 'daftar_skripsi' ? 'class="active"' : '' ?>>
